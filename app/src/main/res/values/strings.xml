@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Gypee</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="welcome_image_description">A child playing flute alone</string>
+    <string name="login">Login</string>
+    <string name="result">Result</string>
+    <string name="calculate">Calculate</string>
+    <string name="quick_access">Quick Access</string>
+    <string name="sign_up">Sign up</string>
+
+    <string-array name="departments">
+        <item>Please Select Your Course</item>
+        <item>Accounting</item>
+        <item>Botany</item>
+        <item>Chemistry</item>
+        <item>Civil Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Computer Engineering</item>
+        <item>Computer Science with Economics</item>
+        <item>Computer Science with Mathematics</item>
+        <item>Economics</item>
+        <item>Electrical and Electronics Engineering</item>
+        <item>English Major</item>
+        <item>English with Literature</item>
+        <item>Food Science</item>
+        <item>Food Technology</item>
+        <item>Material Science</item>
+        <item>Mechanical Engineering</item>
+        <item>Mathematics</item>
+        <item>Microbiology</item>
+        <item>Material Science</item>
+        <item>Physics</item>
+        <item>Philosophy</item>
+        <item>Psychology</item>
+        <item>Sociology</item>
+        <item>Zoology</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>

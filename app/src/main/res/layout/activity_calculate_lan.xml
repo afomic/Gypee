@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.afomic.group.calculate">
+    <include
+    android:id="@+id/calculate_toolbar"
+    layout="@layout/toolbar"/>
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:elevation="1dp"
+                android:background="@color/backgroundColor"
+                android:layout_margin="@dimen/surface_margin"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size"
+                    android:layout_margin="@dimen/surface_margin"
+                    android:text="select your course"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <GridLayout
+                    android:layout_marginBottom="10dp"
+                    android:columnCount="3"
+                    android:id="@+id/my_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:elevation="1dp"
+                android:background="@color/backgroundColor"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/surface_margin"
+                android:layout_marginRight="@dimen/surface_margin">
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size"
+                    android:layout_margin="@dimen/surface_margin"
+                    android:text="select the grade for each course"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ListView
+                    android:padding="3dp"
+                    android:divider="#fff"
+                    android:dividerHeight="10dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/my_recycle"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@color/backgroundColor"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:id="@+id/no_courses_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="We Currently Have No Course For This Semester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:background="@color/colorPrimary"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textColor="@color/backgroundColor"
+                android:layout_gravity="center"
+                android:id="@+id/no_add_button"
+                android:text="Add New Course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/search_layout"
+            android:background="@color/backgroundColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@color/colorPrimary"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textColor="@color/backgroundColor"
+                android:layout_gravity="center"
+                android:id="@+id/search_add_button"
+                android:text="Add New Course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
