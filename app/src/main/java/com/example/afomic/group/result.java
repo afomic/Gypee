@@ -67,23 +67,12 @@ public class result extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()==R.id.result_next){
             Intent intent=new Intent(result.this,calculate.class);
-            intent.putExtra("username",username);
-            intent.putExtra("department",department);
-            if(semester==1){
-                semester= semester+1;
-                intent.putExtra("semester",semester);
-                intent.putExtra("level",level);
-            }
-            else{
-                semester= semester-1;
-                level=level+1;
-                intent.putExtra("semester", semester);
-                intent.putExtra("level",level);
+            passData(intent);
+            if(username!=null){
+                //update user information if this not a quickAccess
+                data.editAccount(username,totalPoint,totalUnit,level,semester);
             }
 
-            data.editAccount(username,totalPoint,totalUnit,level,semester);
-            intent.putExtra("totalUnit",totalUnit);
-            intent.putExtra("totalPoint",totalPoint);
             startActivity(intent);
             finish();
 
@@ -104,5 +93,20 @@ public class result extends AppCompatActivity {
         startActivity(intent);
         finish();
         super.onBackPressed();
+    }
+    public void passData(Intent intent){
+        intent.putExtra("username",username);
+        intent.putExtra("department",department);
+        if(semester==1){
+            semester= semester+1;
+        }
+        else{
+            semester= semester-1;
+            level=level+1;
+        }
+        intent.putExtra("semester", semester);
+        intent.putExtra("level",level);
+        intent.putExtra("totalUnit",totalUnit);
+        intent.putExtra("totalPoint",totalPoint);
     }
 }

@@ -41,6 +41,9 @@ public class welcome extends AppCompatActivity {
         passwordLayout=(TextInputLayout)findViewById(R.id.et_password_layout);
         setGotoSpan(signUp,signUp.class);
 
+        String[] allDepartment = getResources().getStringArray(R.array.departments);
+        StudentFaculty.getInstance().setAllDepartment(allDepartment);
+
         final ModelData userData= new ModelData(this);
 
         login.setOnClickListener(new View.OnClickListener() {

@@ -52,6 +52,9 @@ public class quickAccess extends AppCompatActivity {
         firstSemester.setOnCheckedChangeListener(new RbListner());
         secondSemester.setOnCheckedChangeListener(new RbListner());
 
+        String[] allDepartment = getResources().getStringArray(R.array.departments);
+        StudentFaculty.getInstance().setAllDepartment(allDepartment);
+
         ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.departments, android.R.layout.simple_selectable_list_item);
         departmentSpinner.setAdapter(spinnerAdapter);
         departmentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class StudentFaculty {
 
     String[][] department={{"Technology","Computer Engineering","Computer Science with Economics","Computer Science with Mathematics","Mechanical Engineering","Civil Engineering","Material Science","Food Science","Food Technology","Electrical and Electronics Engineering","Chemical Engineering"}
-            ,{"Science","Chemistry","Physics","Mathematics","Geology","Microbiology"},
+            ,{"Science","Chemistry","Physics","Mathematics","Geology","Microbiology","Botany"},
             {"Social Science","Sociology","Psychology","Economics","Philosophy"}
             ,{"Admin","Accounting","Public Administration"}
             ,{"Art","English Major","English with Literature"}};

@@ -20,7 +20,6 @@ ImageView welcomeImage;
         welcomeImage = (ImageView) findViewById(R.id.welcome_image);
         myName = (TextView) findViewById(R.id.my_name);
         String[] allDepartment = getResources().getStringArray(R.array.departments);
-
         StudentFaculty.getInstance().setAllDepartment(allDepartment);
         final ModelData newData=new ModelData(MainActivity.this);
         new Handler().postDelayed(new Runnable() {
@@ -30,18 +29,6 @@ ImageView welcomeImage;
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
-        if(!newData.isEmpty()){
-             new Handler().post(new Runnable() {
-                 @Override
-                 public void run() {
-                     InputData allCourse = new InputData();
-                     newData.addEntries(allCourse.getData());
-                 }
-             });
-        }
-
-
-
+        }, 2000);
     }
 }

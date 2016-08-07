@@ -204,7 +204,7 @@ public class ModelData  extends SQLiteOpenHelper{
             db = getReadableDatabase();
             String[] projection={"course_name","course_unit"};
             Cursor cursor= db.query(COURSE_TABLE, projection, null, null, null, null, null);
-            return cursor.moveToNext();
+            return !cursor.moveToNext();
         } catch (Exception e) {
             return true;
         } finally {

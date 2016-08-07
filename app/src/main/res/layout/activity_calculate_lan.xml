@@ -8,6 +8,7 @@
     <include
     android:id="@+id/calculate_toolbar"
     layout="@layout/toolbar"/>
+
     <FrameLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
@@ -117,6 +118,14 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
 
 
     </FrameLayout>
